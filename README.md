@@ -20,3 +20,33 @@ int main() {
     return 0;
 }
 
+[Ödev6.cpp](https://github.com/user-attachments/files/24782160/Odev6.cpp)
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Faktoriyel hesaplayan fonksiyon
+long long faktoriyel(int x) {
+    long long f = 1;
+    for (int i = 1; i <= x; i++) {
+        f *= i;
+    }
+    return f;
+}
+
+int main() {
+    int n;
+    double toplam = 0.0;
+
+    cout << "n degerini giriniz: ";
+    cin >> n;
+
+    for (int k = 1; k <= n; k++) {
+        toplam += pow(5, k) / faktoriyel(2 * k);
+    }
+
+    cout << "Serinin ilk " << n << " teriminin toplami = " << toplam << endl;
+
+    return 0;
+}
+
